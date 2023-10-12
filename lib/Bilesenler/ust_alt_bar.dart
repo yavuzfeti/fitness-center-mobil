@@ -40,19 +40,19 @@ class _ust_alt_barState extends State<ust_alt_bar> {
           return (await showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                  title: Text(style: TextStyle(color: ana_renkler.ana_renk),"Çıkış"),
-                  content: Text(style: TextStyle(color: ana_renkler.beyaz),"Uygulamadan çıkmak istiyor musunuz?"),
+                  title: Text(style: TextStyle(color: renkler.ana_renk),"Çıkış"),
+                  content: Text(style: TextStyle(color: renkler.beyaz),"Uygulamadan çıkmak istiyor musunuz?"),
                   actions: <Widget>[
                     TextButton(
                       onPressed: () => Navigator.of(context).pop(true),
-                      child: Text(style: TextStyle(color: ana_renkler.beyaz),"Evet"),
+                      child: Text(style: TextStyle(color: renkler.beyaz),"Evet"),
                     ),
                     TextButton(
                       onPressed: () => Navigator.of(context).pop(false),
-                      child: Text(style: TextStyle(color: ana_renkler.ana_renk),"Hayır"),
+                      child: Text(style: TextStyle(color: renkler.ana_renk),"Hayır"),
                     ),
                   ],
-                  backgroundColor: ana_renkler.koyu,
+                  backgroundColor: renkler.koyu,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
@@ -65,12 +65,12 @@ class _ust_alt_barState extends State<ust_alt_bar> {
           appBar: _sayfa_index != 4
               ? AppBar(
                   elevation: 0,
-                  backgroundColor: ana_renkler.arkaplan,
+                  backgroundColor: renkler.arkaplan,
                   leading: IconButton(
                       onPressed: () => _sayfa_degistir(4),
                       icon: const Icon(
                         Icons.account_circle_rounded,
-                        color: ana_renkler.beyaz,
+                        color: renkler.beyaz,
                       )),
                   title: const Text("Kullanıcı Adı"),
                   actions: [
@@ -78,20 +78,20 @@ class _ust_alt_barState extends State<ust_alt_bar> {
                         onPressed: () => _sayfa_degistir(5),
                         icon: Icon(
                           Icons.favorite_rounded,
-                          color: ana_renkler.beyaz,
+                          color: renkler.beyaz,
                         )),
                     IconButton(
                         onPressed: () => _sayfa_degistir(6),
                         icon: const Icon(
                           Icons.notifications_rounded,
-                          color: ana_renkler.beyaz,
+                          color: renkler.beyaz,
                         )),
                   ],
                 )
               : null,
           body: _sayfalar[_sayfa_index],
           bottomNavigationBar: BottomAppBar(
-            color: ana_renkler.arkaplan,
+            color: renkler.arkaplan,
             shape: const CircularNotchedRectangle(),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

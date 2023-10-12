@@ -11,8 +11,12 @@ class profil extends StatefulWidget {
 class _profilState extends State<profil> {
   @override
   Widget build(BuildContext context) {
+
+    TextStyle textStyle = TextStyle(
+        color: renkler.beyaz, fontSize: 17);
+
     return Scaffold(
-      backgroundColor: ana_renkler.arkaplan,
+      backgroundColor: renkler.arkaplan,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -20,55 +24,50 @@ class _profilState extends State<profil> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
+              alignment: Alignment.bottomCenter,
               children: [
                 Image(image: AssetImage("lib/Ekler/resimler/resim.png")),
-                Positioned(
-                  right: 0,
-                  left: 0,
-                  bottom: 0,
-                  child: Column(
+                Column(
                     children: [
                       Icon(
                         Icons.account_circle_rounded,
                         size: 200,
-                        color: ana_renkler.beyaz,
+                        color: renkler.beyaz,
                       ),
                       Text(
                           style:
-                              TextStyle(fontSize: 22, color: ana_renkler.beyaz),
+                              TextStyle(fontSize: 22, color: renkler.beyaz),
                           "Kullanıcı adı"),
                       Text(
                           style: TextStyle(
-                              fontSize: 17, color: ana_renkler.azkoyu),
+                              fontSize: 17, color: renkler.azkoyu),
                           "Kullanıcı e-postası"),
                     ],
                   ),
-                ),
               ],
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+              padding: const EdgeInsets.fromLTRB(35, 15, 35, 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextButton(
-                    onPressed: null,
+                    onPressed: (){},
                     child: Row(
                       children: [
                         SvgPicture.asset(
-                            "lib/Ekler/iconlar/profil/profili_düzenle.svg"),
+                            "lib/Ekler/iconlar/profil/profili_duzenle.svg"),
                         SizedBox(
                           width: 10,
                         ),
                         Text(
-                            style: TextStyle(
-                                color: ana_renkler.beyaz, fontSize: 17),
+                            style: textStyle,
                             "Profili düzenle"),
                       ],
                     ),
                   ),
                   TextButton(
-                    onPressed: null,
+                    onPressed: (){},
                     child: Row(
                       children: [
                         SvgPicture.asset(
@@ -77,14 +76,13 @@ class _profilState extends State<profil> {
                           width: 10,
                         ),
                         Text(
-                            style: TextStyle(
-                                color: ana_renkler.beyaz, fontSize: 17),
+                            style: textStyle,
                             "Bildirimler"),
                       ],
                     ),
                   ),
                   TextButton(
-                    onPressed: null,
+                    onPressed: (){},
                     child: Row(
                       children: [
                         SvgPicture.asset("lib/Ekler/iconlar/profil/yardim.svg"),
@@ -92,14 +90,13 @@ class _profilState extends State<profil> {
                           width: 10,
                         ),
                         Text(
-                            style: TextStyle(
-                                color: ana_renkler.beyaz, fontSize: 17),
+                            style: textStyle,
                             "Yardım"),
                       ],
                     ),
                   ),
                   TextButton(
-                    onPressed: null,
+                    onPressed: (){},
                     child: Row(
                       children: [
                         SvgPicture.asset(
@@ -108,8 +105,7 @@ class _profilState extends State<profil> {
                           width: 10,
                         ),
                         Text(
-                            style: TextStyle(
-                                color: ana_renkler.beyaz, fontSize: 17),
+                            style: textStyle,
                             "Hakkında"),
                       ],
                     ),
@@ -122,7 +118,7 @@ class _profilState extends State<profil> {
                     },
                     child: Text(
                             style: TextStyle(
-                                color: Colors.redAccent, fontSize: 17),
+                                color: renkler.kirmizi, fontSize: 17),
                             "Oturumu Kapat"),
                   ),
                 ],

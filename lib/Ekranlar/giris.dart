@@ -23,35 +23,49 @@ class _girisState extends State<giris> {
 
   @override
   Widget build(BuildContext context) {
+
+    InputDecoration edt_decor(Icon icon,String hint) {
+      return InputDecoration(
+        prefixIconColor: renkler.ana_renk,
+          prefixIcon: icon,
+          hintText: hint,
+          hintStyle: TextStyle(
+            color: renkler.beyaz,
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: renkler.azkoyu,
+            ),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: renkler.ana_renk,
+            ),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: renkler.ana_renk,),
+            borderRadius: BorderRadius.circular(10),
+          ));
+    }
+
     return Scaffold(
-        backgroundColor: ana_renkler.koyu,
+        backgroundColor: renkler.arkaplan,
         body: Padding(
           padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
-          child: Form(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.logo_dev,color: ana_renkler.beyaz,size: 75,),
+                Icon(Icons.logo_dev,color: renkler.ana_renk,size: 125,),
                 Padding(
                   padding: const EdgeInsets.all(15),
-                  child: Text(style: TextStyle(color: ana_renkler.beyaz,fontSize: 25),"Fitness Center"),
+                  child: Text(style: TextStyle(color: renkler.beyaz,fontSize: 28),"Fitness Center"),
                 ),
-                TextFormField(
+                TextField(
                   focusNode: _odak_1,
                   autofocus: true,
-                  decoration: InputDecoration(
-                      prefixIconColor: ana_renkler.koyu,
-                      prefixIcon: Icon(Icons.email),
-                    filled: true,
-                    fillColor: ana_renkler.beyaz,
-                    hintText: "E-postanızı giriniz",
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    )
-                  ),
+                  decoration: edt_decor(Icon(Icons.email_rounded),"Kullanıcı adınızı girin"),
                   style: TextStyle(fontSize: 16),
                   onEditingComplete: () {
                     _odak_1.unfocus();
@@ -61,31 +75,18 @@ class _girisState extends State<giris> {
                 SizedBox(
                   height: 10,
                 ),
-                TextFormField(
+                TextField(
                   focusNode: _odak_2,
                   obscureText: true,
-                  decoration: InputDecoration(
-                      prefixIconColor: ana_renkler.koyu,
-                      prefixIcon: Icon(Icons.key),
-                    filled: true,
-                    fillColor: ana_renkler.beyaz,
-                    hintText: "Şifrenizi giriniz",
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      )
-                  ),
+                  decoration: edt_decor(Icon(Icons.key_rounded), "Şifrenizi girin"),
                   style: TextStyle(fontSize: 16),
                 ),
                 Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
+                  mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
                         TextButton(
-                          onPressed:
-                              null, //Buraya şifremi unuttum fonksiyonu gelecek
-                          child: Text(style: TextStyle(color: ana_renkler.beyaz),"Şifremi unuttum !"),
+                          onPressed: () {}, //Buraya şifremi unuttum fonksiyonu gelecek
+                          child: Text(style: TextStyle(color: renkler.beyaz),"Şifremi unuttum !"),
                         )
                       ],
                     ),
@@ -96,20 +97,19 @@ class _girisState extends State<giris> {
                     onPressed: _girise_git,
                     style: ButtonStyle(
                         foregroundColor: const MaterialStatePropertyAll(
-                            ana_renkler.beyaz),
+                            renkler.beyaz),
                         backgroundColor:
-                            const MaterialStatePropertyAll(ana_renkler.koyu),
+                            const MaterialStatePropertyAll(renkler.koyu),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                           side: const BorderSide(
-                              color: ana_renkler.azkoyu),
+                              color: renkler.ana_renk),
                         ))),
                     child: const Text(style: TextStyle(fontSize: 16),"Giriş yap"),
                   ),
                 )
               ],
             ),
-        ),
         ),
     );
   }

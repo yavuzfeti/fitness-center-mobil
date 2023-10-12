@@ -16,28 +16,31 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
         child: Column(
           children: [
             TextField(
-              style: TextStyle(color: ana_renkler.beyaz),
+              cursorColor: renkler.ana_renk,
+              style: TextStyle(color: renkler.beyaz),
               decoration: InputDecoration(
-                prefixIconColor: ana_renkler.azkoyu,
+                prefixIconColor: renkler.azkoyu,
                 prefixIcon: Icon(Icons.search),
                 filled: true,
-                fillColor: ana_renkler.koyu,
-                hintStyle: TextStyle(color: ana_renkler.azkoyu),
+                fillColor: renkler.koyu,
+                hintStyle: TextStyle(color: renkler.azkoyu),
                 hintText: "Ara",
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide(color: Colors.transparent)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(16),
+                  borderSide: BorderSide(color: renkler.koyu),
+                ),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.transparent)),
+                    borderSide: BorderSide(color: Colors.transparent)
+                  ),
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(style: TextStyle(color: ana_renkler.beyaz),"Eğitim setlerini keşfet!"),
+                Text(style: TextStyle(color: renkler.beyaz),"Eğitim setlerini keşfet!"),
                 TextButton(
                     onPressed: null,
-                    child: Text(style: TextStyle(color: ana_renkler.ana_renk),"Hepsini Gör"))
+                    child: Text(style: TextStyle(color: renkler.ana_renk),"Hepsini Gör"))
               ],
             ),
             SizedBox(
@@ -60,7 +63,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Kardiyo Seti",
                                   style: TextStyle(
                                     fontSize: 20,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                                 SizedBox(height: 10,),
@@ -68,7 +71,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Eğitmen Ahmet Kaplan",
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                               ],
@@ -90,7 +93,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Kardiyo Seti 2",
                                   style: TextStyle(
                                     fontSize: 20,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                                 SizedBox(height: 10,),
@@ -98,7 +101,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Eğitmen Robert Fox",
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                               ],
@@ -120,7 +123,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Kardiyo Seti 3",
                                   style: TextStyle(
                                     fontSize: 20,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                                 SizedBox(height: 10,),
@@ -128,7 +131,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Eğitmen Ahmet Kaplan",
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                               ],
@@ -143,10 +146,10 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(style: TextStyle(color: ana_renkler.beyaz),"Ortak aktiviteler keşfet!"),
+                Text(style: TextStyle(color: renkler.beyaz),"Ortak aktiviteler keşfet!"),
                 TextButton(
                     onPressed: null,
-                    child: Text(style: TextStyle(color: ana_renkler.ana_renk),"Hepsini Gör"))
+                    child: Text(style: TextStyle(color: renkler.ana_renk),"Hepsini Gör"))
               ],
             ),
             SizedBox(
@@ -171,7 +174,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Kardiyo Seti",
                                   style: TextStyle(
                                     fontSize: 20,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                                 SizedBox(height: 10,),
@@ -179,7 +182,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Eğitmen Ahmet Kaplan",
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                               ],
@@ -201,7 +204,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Kardiyo Seti 2",
                                   style: TextStyle(
                                     fontSize: 20,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                                 SizedBox(height: 10,),
@@ -209,7 +212,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Eğitmen Robert Fox",
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                               ],
@@ -231,7 +234,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Kardiyo Seti 3",
                                   style: TextStyle(
                                     fontSize: 20,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                                 SizedBox(height: 10,),
@@ -239,7 +242,7 @@ class _ana_sayfa_tabState extends State<ana_sayfa_tab> {
                                   "Eğitmen Ahmet Kaplan",
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: ana_renkler.beyaz,
+                                    color: renkler.beyaz,
                                   ),
                                 ),
                               ],

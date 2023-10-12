@@ -15,9 +15,9 @@ class _ana_sayfaState extends State<ana_sayfa> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        backgroundColor: ana_renkler.arkaplan,
+        backgroundColor: renkler.arkaplan,
         appBar: const TabBar(
-          indicatorColor: ana_renkler.ana_renk,
+          indicatorColor: renkler.ana_renk,
           tabs: [
             Tab(
               text: "Anasayfa",

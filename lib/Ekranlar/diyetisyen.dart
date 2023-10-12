@@ -11,7 +11,7 @@ class _diyetisyenState extends State<diyetisyen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ana_renkler.arkaplan,
+      backgroundColor: renkler.arkaplan,
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -20,7 +20,7 @@ class _diyetisyenState extends State<diyetisyen> {
             Padding(
               padding: const EdgeInsets.all(20),
               child: Text(
-                  style: TextStyle(color: ana_renkler.beyaz, fontSize: 17),
+                  style: TextStyle(color: renkler.beyaz, fontSize: 17),
                   "Diyetisyen Takvimi"),
             ),
             Stack(
@@ -32,7 +32,7 @@ class _diyetisyenState extends State<diyetisyen> {
                       Container(
                         height: 250,
                         decoration: BoxDecoration(
-                          color: ana_renkler.koyu,
+                          color: renkler.koyu,
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Column(
@@ -46,7 +46,7 @@ class _diyetisyenState extends State<diyetisyen> {
                                     padding: const EdgeInsets.only(left: 20),
                                     child: Text(
                                         style: TextStyle(
-                                            color: ana_renkler.beyaz,
+                                            color: renkler.beyaz,
                                             fontSize: 20),
                                         "Pazartesi"),
                                   ),
@@ -54,7 +54,7 @@ class _diyetisyenState extends State<diyetisyen> {
                                     padding: const EdgeInsets.only(left: 20),
                                     child: Text(
                                         style: TextStyle(
-                                            color: ana_renkler.azkoyu,
+                                            color: renkler.azkoyu,
                                             fontSize: 17),
                                         "Salı"),
                                   ),
@@ -62,7 +62,7 @@ class _diyetisyenState extends State<diyetisyen> {
                                     padding: const EdgeInsets.only(left: 20),
                                     child: Text(
                                         style: TextStyle(
-                                            color: ana_renkler.azkoyu,
+                                            color: renkler.azkoyu,
                                             fontSize: 17),
                                         "Çarşamba"),
                                   ),
@@ -70,7 +70,7 @@ class _diyetisyenState extends State<diyetisyen> {
                                     padding: const EdgeInsets.only(left: 20),
                                     child: Text(
                                         style: TextStyle(
-                                            color: ana_renkler.azkoyu,
+                                            color: renkler.azkoyu,
                                             fontSize: 17),
                                         "Perşembe"),
                                   ),
@@ -78,7 +78,7 @@ class _diyetisyenState extends State<diyetisyen> {
                                     padding: const EdgeInsets.only(left: 20),
                                     child: Text(
                                         style: TextStyle(
-                                            color: ana_renkler.azkoyu,
+                                            color: renkler.azkoyu,
                                             fontSize: 17),
                                         "Cuma"),
                                   ),
@@ -86,7 +86,7 @@ class _diyetisyenState extends State<diyetisyen> {
                                     padding: const EdgeInsets.only(left: 20),
                                     child: Text(
                                         style: TextStyle(
-                                            color: ana_renkler.azkoyu,
+                                            color: renkler.azkoyu,
                                             fontSize: 17),
                                         "Cumartesi"),
                                   ),
@@ -94,7 +94,7 @@ class _diyetisyenState extends State<diyetisyen> {
                                     padding: const EdgeInsets.fromLTRB(20,0,20,0),
                                     child: Text(
                                         style: TextStyle(
-                                            color: ana_renkler.azkoyu,
+                                            color: renkler.azkoyu,
                                             fontSize: 17),
                                         "Pazar"),
                                   ),
@@ -104,7 +104,7 @@ class _diyetisyenState extends State<diyetisyen> {
                             SvgPicture.asset("lib/Ekler/resimler/elma.svg"),
                             Text(
                                 style: TextStyle(
-                                    color: ana_renkler.beyaz, fontSize: 17),
+                                    color: renkler.beyaz, fontSize: 17),
                                 "Henüz diyetisyen takvimi oluşturmadınız."),
                           ],
                         ),
@@ -118,7 +118,7 @@ class _diyetisyenState extends State<diyetisyen> {
                           child: ElevatedButton(
                               style: ButtonStyle(
                                 backgroundColor: MaterialStatePropertyAll(
-                                    ana_renkler.ana_renk),
+                                    renkler.ana_renk),
                                 shape: MaterialStateProperty.all(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),

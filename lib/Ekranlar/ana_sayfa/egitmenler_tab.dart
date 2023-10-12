@@ -16,7 +16,7 @@ class _egitmenler_tabState extends State<egitmenler_tab> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(style: TextStyle(color: ana_renkler.beyaz),"Favori Eğitmenlerim"),
+              Text(style: TextStyle(color: renkler.beyaz),"Favori Eğitmenlerim"),
             ],
           ),
           SingleChildScrollView(
@@ -26,7 +26,7 @@ class _egitmenler_tabState extends State<egitmenler_tab> {
                 Container(
                   margin: EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    color: ana_renkler.koyu,
+                    color: renkler.koyu,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   width: 160,
@@ -36,18 +36,18 @@ class _egitmenler_tabState extends State<egitmenler_tab> {
                     children: [
                       Icon(
                         Icons.account_circle_rounded,
-                        color: ana_renkler.beyaz,
+                        color: renkler.beyaz,
                         size: 65,
                       ),
-                      Text(style: TextStyle(color: ana_renkler.beyaz,fontSize: 15 ),"Lorem Ipsum"),
-                      Text(style: TextStyle(color: ana_renkler.beyaz,fontSize: 10 ),"Fitness Antrenörü"),
+                      Text(style: TextStyle(color: renkler.beyaz,fontSize: 15 ),"Lorem Ipsum"),
+                      Text(style: TextStyle(color: renkler.beyaz,fontSize: 10 ),"Fitness Antrenörü"),
                     ],
                   ),
                 ),
                 Container(
                   margin: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: ana_renkler.koyu,
+                    color: renkler.koyu,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   width: 160,
@@ -57,18 +57,18 @@ class _egitmenler_tabState extends State<egitmenler_tab> {
                     children: [
                       Icon(
                         Icons.account_circle_rounded,
-                        color: ana_renkler.beyaz,
+                        color: renkler.beyaz,
                         size: 65,
                       ),
-                      Text(style: TextStyle(color: ana_renkler.beyaz,fontSize: 15 ),"Lorem Ipsum"),
-                      Text(style: TextStyle(color: ana_renkler.beyaz,fontSize: 10 ),"Muay Thai Eğitmeni"),
+                      Text(style: TextStyle(color: renkler.beyaz,fontSize: 15 ),"Lorem Ipsum"),
+                      Text(style: TextStyle(color: renkler.beyaz,fontSize: 10 ),"Muay Thai Eğitmeni"),
                     ],
                   ),
                 ),
                 Container(
                   margin: EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    color: ana_renkler.koyu,
+                    color: renkler.koyu,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   width: 160,
@@ -78,18 +78,18 @@ class _egitmenler_tabState extends State<egitmenler_tab> {
                     children: [
                       Icon(
                         Icons.account_circle_rounded,
-                        color: ana_renkler.beyaz,
+                        color: renkler.beyaz,
                         size: 65,
                       ),
-                      Text(style: TextStyle(color: ana_renkler.beyaz,fontSize: 15 ),"Lorem Ipsum"),
-                      Text(style: TextStyle(color: ana_renkler.beyaz,fontSize: 10 ),"Eğitmen İsmi"),
+                      Text(style: TextStyle(color: renkler.beyaz,fontSize: 15 ),"Lorem Ipsum"),
+                      Text(style: TextStyle(color: renkler.beyaz,fontSize: 10 ),"Eğitmen İsmi"),
                     ],
                   ),
                 ),
                 Container(
                   margin: EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    color: ana_renkler.koyu,
+                    color: renkler.koyu,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   width: 160,
@@ -99,11 +99,11 @@ class _egitmenler_tabState extends State<egitmenler_tab> {
                     children: [
                       Icon(
                         Icons.account_circle_rounded,
-                        color: ana_renkler.beyaz,
+                        color: renkler.beyaz,
                         size: 65,
                       ),
-                      Text(style: TextStyle(color: ana_renkler.beyaz,fontSize: 15 ),"Lorem Ipsum"),
-                      Text(style: TextStyle(color: ana_renkler.beyaz,fontSize: 10 ),"Eğitmen İsmi"),
+                      Text(style: TextStyle(color: renkler.beyaz,fontSize: 15 ),"Lorem Ipsum"),
+                      Text(style: TextStyle(color: renkler.beyaz,fontSize: 10 ),"Eğitmen İsmi"),
                     ],
                   ),
                 ),
@@ -113,7 +113,7 @@ class _egitmenler_tabState extends State<egitmenler_tab> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(style: TextStyle(color: ana_renkler.beyaz),"Tüm Eğitmenler"),
+              Text(style: TextStyle(color: renkler.beyaz),"Tüm Eğitmenler"),
             ],
           ),
           Expanded(
@@ -121,9 +121,9 @@ class _egitmenler_tabState extends State<egitmenler_tab> {
               itemCount: 25,
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
-                  leading: Icon(Icons.account_circle_rounded,color: ana_renkler.beyaz,size: 45,),
-                  title: Text(style: TextStyle(color: ana_renkler.beyaz),"Lorem ipsum"),
-                  subtitle: Text("Dolor sit amet" + " • " + "5 Trainings", style: TextStyle(color: ana_renkler.azkoyu)),
+                  leading: Icon(Icons.account_circle_rounded,color: renkler.beyaz,size: 45,),
+                  title: Text(style: TextStyle(color: renkler.beyaz),"Lorem ipsum"),
+                  subtitle: Text("Dolor sit amet" + " • " + "5 Trainings", style: TextStyle(color: renkler.azkoyu)),
                 );
               },
             ),
